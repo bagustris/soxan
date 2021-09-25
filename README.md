@@ -12,21 +12,13 @@ models.
 I'm just at the beginning of all the possible speech tasks. To start, we continue the training script with the speech
 emotion recognition problem.
 
-### Training - Notebook
-
-| Task                                     | Notebook                                                                                                                                                                                                            |
-|------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Speech Emotion Recognition (Wav2Vec 2.0) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/m3hrdadfi/soxan/blob/main/notebooks/Emotion_recognition_in_Greek_speech_using_Wav2Vec2.ipynb) |
-| Speech Emotion Recognition (Hubert)      | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/m3hrdadfi/soxan/blob/main/notebooks/Emotion_recognition_in_Greek_speech_using_HuBERT.ipynb)   |
-| Audio Classification (Wav2Vec 2.0)       | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/m3hrdadfi/soxan/blob/main/notebooks/Eating_Sound_Collection_using_Wav2Vec2.ipynb)             |
-
 ### Training - CMD
 
 ```bash
 python3 run_wav2vec_clf.py \
     --pooling_mode="mean" \
     --model_name_or_path="lighteternal/wav2vec2-large-xlsr-53-greek" \
-    --model_mode="wav2vec2" \ # or you can use hubert
+    --model_mode="wav2vec" \ # or you can use hubert
     --output_dir=/path/to/output \
     --cache_dir=/path/to/cache/ \
     --train_file=/path/to/train.csv \
